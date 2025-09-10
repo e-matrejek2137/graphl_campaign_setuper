@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 3. Uruchom aplikację:
 ```bash
-python complete_mutations_app_enriched.py
+python campaign_setuper.py
 ```
 
 ## Użytkowanie
