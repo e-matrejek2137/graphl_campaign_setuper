@@ -1,4 +1,4 @@
-﻿# Campaign Setup Automator - RTB House
+# Campaign Setup Automator - RTB House
 
 Aplikacja do automatycznego konfigurowania kampanii reklamowych w systemie RTB House za pomocą GraphQL API.
 
@@ -29,6 +29,33 @@ Aplikacja do automatycznego konfigurowania kampanii reklamowych w systemie RTB H
   - Bidding Model CPM
   - Creative IDs
   - Placement Environment
+
+### Sprawdzenie Setupu Kampanii (GŁÓWNA FUNKCJONALNOŚĆ)
+- **Sprawdzanie aktualnej konfiguracji kampanii** - pobiera rzeczywiste dane z GraphQL API
+- **Wybór pól do sprawdzenia** - użytkownik może wybrać które pola chce sprawdzić
+- **Wprowadzanie oczekiwanych wartości** - dla każdego pola można wprowadzić oczekiwaną wartość
+- **Automatyczne porównywanie** - porównuje rzeczywiste wartości z oczekiwanymi
+- **Status porównania**:
+  - ✅ **PASUJE** - wartość dokładnie się zgadza
+  - ⚠️ **CZĘŚCIOWO PASUJE** - wartość częściowo się zgadza
+  - ❌ **NIE PASUJE** - wartość się nie zgadza
+
+#### Dostępne pola do sprawdzenia:
+- **Podstawowe informacje**: nazwa kampanii, status, daty, typ subkampanii, data centers, landing URL
+- **Budżety i limity**: budżet dzienny/miesięczny, impresje, limity wydatków
+- **Targeting Policy**: SSP, Deals, Hosty, App IDs, URL Labels
+- **Ad API Framework**: obsługiwane frameworki
+- **Profile Identifiers**: dozwolone/niedozwolone typy
+- **Mobile Placement**: ustawienia fullscreen
+- **Bidding Model CPM**: wartości CPM dla różnych segmentów
+- **Device Types**: dozwolone/niedozwolone typy urządzeń
+- **Geotargeting**: kraje, regiony, miasta
+- **User Segments**: segmenty użytkowników
+- **Creative IDs**: przypisane kreatywy
+- **Placement Environment**: środowiska umieszczania
+- **Traffic Quality**: Max BR, Min VCR, Viewability
+- **Cookie Types**: dozwolone typy cookies
+- **Fraud Prevention**: zabronione etykiety
 
 ### 📊 Zmiana Statusu Kampanii
 - Zmiana statusu kampanii (ACTIVE, PAUSED)
@@ -75,13 +102,7 @@ python campaign_setuper.py
 2. Kliknij "🔍 Sprawdź advertisera"
 3. Sprawdź wyniki w sekcji wyników
 
-### 2. Konfiguracja Kampanii
-1. Wprowadź ID kampanii
-2. Wybierz pola do konfiguracji z listy
-3. Wprowadź wartości w polach konfiguracji (z podpowiedziami)
-4. Kliknij "Zapisz konfigurację"
-
-### 3. Sprawdzenie Setupu Kampanii (NOWA FUNKCJONALNOŚĆ)
+### 2. Sprawdzenie Setupu Kampanii (GŁÓWNA FUNKCJONALNOŚĆ)
 1. Wprowadź Campaign ID i Advertiser ID
 2. Wybierz pola które chcesz sprawdzić (checkboxy)
 3. **Opcjonalnie**: wprowadź oczekiwane wartości w polach tekstowych pod każdym checkboxem
@@ -90,6 +111,12 @@ python campaign_setuper.py
    - Rzeczywiste wartości z kampanii
    - Status porównania (jeśli podano oczekiwane wartości)
    - Oczekiwane wartości (jeśli podano)
+
+### 3. Konfiguracja Kampanii
+1. Wprowadź ID kampanii
+2. Wybierz pola do konfiguracji z listy
+3. Wprowadź wartości w polach konfiguracji (z podpowiedziami)
+4. Kliknij "Zapisz konfigurację"
 
 ### 4. Zmiana Statusu
 1. Wprowadź ID kampanii
@@ -108,7 +135,12 @@ Aplikacja używa następujących ustawień API:
 
 ```
 graphl_campaign_setuper/
-├── complete_mutat
+├── campaign_setuper.py # Główna aplikacja (z funkcją sprawdzania setupu)
+├── previous_version.py # Poprzednia wersja (bez sprawdzania ustawień)
+├── get-campaign-info.md # Referencja zapytań GraphQL
+├── update_kampanii.md # Referencja mutacji GraphQL
+├── requirements.txt # Wymagane biblioteki
+└── README.md # Ten plik
 ```
 
 ## Bezpieczeństwo
