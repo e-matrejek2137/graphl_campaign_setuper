@@ -65,12 +65,6 @@ Aplikacja do automatycznego konfigurowania kampanii reklamowych w systemie RTB H
 - Automatyczne podpowiedzi dla pól konfiguracji
 - Wyświetlanie możliwych wartości i formatów
 
-### 🖥️ Interfejs użytkownika
-- **Responsywny design** - okno automatycznie dostosowuje się do rozdzielczości ekranu (80% rozmiaru ekranu)
-- **Przyciski zmiany rozmiaru** - możliwość szybkiej zmiany rozmiaru okna
-- **Minimalny rozmiar** - zabezpieczenie przed zbyt małym oknem
-- **Wyśrodkowane okno** - automatyczne wyśrodkowanie na ekranie
-
 ## Wymagania
 
 - Python 3.6+
