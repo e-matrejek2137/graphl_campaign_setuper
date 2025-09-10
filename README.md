@@ -51,7 +51,7 @@ Aplikacja do automatycznego konfigurowania kampanii reklamowych w systemie RTB H
 - **Device Types**: dozwolone/niedozwolone typy urządzeń
 - **Geotargeting**: kraje, regiony, miasta
 - **User Segments**: segmenty użytkowników
-- **Creative IDs**: przypisane kreatywy
+- **Creative IDs**: przypisane kreacje
 - **Placement Environment**: środowiska umieszczania
 - **Traffic Quality**: Max BR, Min VCR, Viewability
 - **Cookie Types**: dozwolone typy cookies
