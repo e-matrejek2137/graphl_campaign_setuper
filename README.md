@@ -96,7 +96,7 @@ python campaign_setuper.py
 2. Kliknij "🔍 Sprawdź advertisera"
 3. Sprawdź wyniki w sekcji wyników
 
-### 2. Sprawdzenie Setupu Kampanii (GŁÓWNA FUNKCJONALNOŚĆ)
+### 2. Sprawdzenie Setupu Kampanii
 1. Wprowadź Campaign ID i Advertiser ID
 2. Wybierz pola które chcesz sprawdzić (checkboxy)
 3. **Opcjonalnie**: wprowadź oczekiwane wartości w polach tekstowych pod każdym checkboxem
