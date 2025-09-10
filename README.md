@@ -30,7 +30,7 @@ Aplikacja do automatycznego konfigurowania kampanii reklamowych w systemie RTB H
   - Creative IDs
   - Placement Environment
 
-### Sprawdzenie Setupu Kampanii (GŁÓWNA FUNKCJONALNOŚĆ)
+### Sprawdzenie Setupu Kampanii
 - **Sprawdzanie aktualnej konfiguracji kampanii** - pobiera rzeczywiste dane z GraphQL API
 - **Wybór pól do sprawdzenia** - użytkownik może wybrać które pola chce sprawdzić
 - **Wprowadzanie oczekiwanych wartości** - dla każdego pola można wprowadzić oczekiwaną wartość
