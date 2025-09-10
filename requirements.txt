@@ -1,0 +1,25 @@
+﻿# Campaign Setup Automator - RTB House
+# Wymagane biblioteki Python
+
+# GUI Framework
+tkinter  # Wbudowane w Python, nie wymaga instalacji
+
+# HTTP requests i GraphQL
+urllib3>=1.26.0
+
+customtkinter>=5.2.0
+
+# JSON handling (wbudowane w Python)
+# json - wbudowane
+
+# Base64 encoding (wbudowane w Python)  
+# base64 - wbudowane
+
+# SSL handling (wbudowane w Python)
+# ssl - wbudowane
+
+# Date/time handling (wbudowane w Python)
+# datetime - wbudowane
+
+# Note: Większość bibliotek jest wbudowana w Python 3.6+
+# Tylko urllib3 może wymagać instalacji: pip install urllib3
