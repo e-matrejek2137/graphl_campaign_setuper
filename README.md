@@ -8,6 +8,7 @@ Aplikacja do automatycznego konfigurowania kampanii reklamowych w systemie RTB H
 - Sprawdzanie dostępności advertisera
 - Walidacja konfiguracji systemu
 - Wyświetlanie szczegółowych informacji o advertiserze
+- Porównywanie z oczekiwanymi wartościami (PASUJE/NIE PASUJE/CZĘŚCIOWO PASUJE)
 
 ### ⚙️ Konfiguracja Kampanii
 - Automatyczne ustawianie obowiązkowych pól:
@@ -37,6 +38,12 @@ Aplikacja do automatycznego konfigurowania kampanii reklamowych w systemie RTB H
 - Automatyczne podpowiedzi dla pól konfiguracji
 - Wyświetlanie możliwych wartości i formatów
 
+### 🖥️ Interfejs użytkownika
+- **Responsywny design** - okno automatycznie dostosowuje się do rozdzielczości ekranu (80% rozmiaru ekranu)
+- **Przyciski zmiany rozmiaru** - możliwość szybkiej zmiany rozmiaru okna
+- **Minimalny rozmiar** - zabezpieczenie przed zbyt małym oknem
+- **Wyśrodkowane okno** - automatyczne wyśrodkowanie na ekranie
+
 ## Wymagania
 
 - Python 3.6+
@@ -58,7 +65,7 @@ pip install -r requirements.txt
 
 3. Uruchom aplikację:
 ```bash
-python complete_mutations_app.py
+python complete_mutations_app_enriched.py
 ```
 
 ## Użytkowanie
@@ -74,7 +81,17 @@ python complete_mutations_app.py
 3. Wprowadź wartości w polach konfiguracji (z podpowiedziami)
 4. Kliknij "Zapisz konfigurację"
 
-### 3. Zmiana Statusu
+### 3. Sprawdzenie Setupu Kampanii (NOWA FUNKCJONALNOŚĆ)
+1. Wprowadź Campaign ID i Advertiser ID
+2. Wybierz pola które chcesz sprawdzić (checkboxy)
+3. **Opcjonalnie**: wprowadź oczekiwane wartości w polach tekstowych pod każdym checkboxem
+4. Kliknij " Sprawdź setup kampanii"
+5. Sprawdź wyniki:
+   - Rzeczywiste wartości z kampanii
+   - Status porównania (jeśli podano oczekiwane wartości)
+   - Oczekiwane wartości (jeśli podano)
+
+### 4. Zmiana Statusu
 1. Wprowadź ID kampanii
 2. Wybierz nowy status (ACTIVE/PAUSED)
 3. Dodaj komentarz (opcjonalnie)
@@ -90,11 +107,8 @@ Aplikacja używa następujących ustawień API:
 ## Struktura Projektu
 
 ```
-demo_graphQL/
-├── complete_mutations_app.py    # Główna aplikacja
-├── update_kampanii.md          # Referencja mutacji GraphQL
-├── requirements.txt            # Wymagane biblioteki
-└── README.md                   # Ten plik
+graphl_campaign_setuper/
+├── complete_mutat
 ```
 
 ## Bezpieczeństwo
