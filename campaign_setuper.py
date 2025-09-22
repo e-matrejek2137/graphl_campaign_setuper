@@ -39,7 +39,7 @@ class CampaignSetupApp:
         self.api_url = "https://api.campaigns.rtbhouse.biz/api/campaigns/graphql"
         self.auth = {
             "username": "ei-inv-graphql-campaigns-api",
-            "password": "KcyBKW283cTXTuiW"
+            "password": ""
         }
         
         self.selected_fields = set()
